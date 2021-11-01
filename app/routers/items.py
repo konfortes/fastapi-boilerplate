@@ -5,7 +5,7 @@ from ..common.http import get_token_header
 router = APIRouter(
     prefix="/items",
     tags=["items"],
-    # dependencies=[Depends(get_token_header)],
+    dependencies=[Depends(get_token_header)],
     responses={404: {"message": "Not found"}},
 )
 
